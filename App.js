@@ -108,19 +108,19 @@ const App: () => Node = () => {
         data={mainData}
         onEndReachedThreshold={0.5}
         onEndReached={() => setPage(page + 1)}
-        
+
         renderItem={({ item, index }) => {
           return (
             <View id={index} style={styles.mainListView}>
               <View style={styles.imageView}>
-              <Image
-                style={styles.image}
-                source={{ uri: item.image_url }}
-              />
+                <Image
+                  style={styles.image}
+                  source={{ uri: item.image_url }}
+                />
               </View>
               <View style={styles.detailView}>
                 <Text style={styles.nameTxt}>{item.name}</Text>
-                  <Text>Record No: {index+1}</Text>
+                <Text>Record No: {index + 1}</Text>
                 <Text numberOfLines={3}>{item.description}</Text>
               </View>
             </View>
@@ -132,11 +132,11 @@ const App: () => Node = () => {
 };
 
 const styles = StyleSheet.create({
-  mainListView: { borderBottomWidth: 1, flexDirection: 'row', paddingTop: 8, paddingBottom: 8},
-  imageView: {width: '25%'},
+  mainListView: { borderBottomWidth: 1, flexDirection: 'row', paddingTop: 8, paddingBottom: 8 },
+  imageView: { width: '25%' },
   image: { height: 80, width: 80, justifyContent: 'center', alignSelf: 'center' },
-  detailView: {paddingLeft: 8, width: '75%', paddingRight: 12},
-  nameTxt: {fontWeight: 'bold'},
+  detailView: { paddingLeft: 8, width: '75%', paddingRight: 12 },
+  nameTxt: { fontWeight: 'bold' },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
